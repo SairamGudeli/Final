@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Four Buttons Example</title>
+    <title>Four Buttons Example</title>
 </head>
 <body>
-	<h1>Welcome to my webpage!</h1>
-	<button>Button 1</button>
-	<button>Button 2</button>
-	<button>Button 3</button>
-	<button>Button 4</button>
+    <h1>Welcome to my webpage!</h1>
+    <button onclick="runPythonCode()">Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <button>Button 4</button>
+
+    <script>
+        function runPythonCode() {
+            // Use AJAX to send a request to the Flask server
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/run_python_code", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText);
+                }
+            };
+            xhr.send();
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+    
+    .container {
+        width: 350px;
+        height: 350px;
+		padding: 40px;
+        background-color: transparent;
+        margin: 0 auto;
+        margin-top: 150px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 8px;
+		backdrop-filter: blur(8px);
+		animation: animateBg 5s linear infinite;
+    }
+	@keyframes animatedBg{
+		100% {
+			filter: hue-rotate(3605deg);
+		}
+	}
+    .container input[type=text], .container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: black;
+        background: #f1f1f1;
+        transition: 0.3s;
+    }
+    .container input[type=text]:focus, .container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    .container .btn {
+        background-color: #328734;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        transition: 0.3s;
+    }
+    .container .btn:hover {
+        opacity:1;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-clip: url('background.webm');
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;  
+  	background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome to my webpage!</h1>
+<p>Here you can find more information about me.</p>
+
+</body>
+</html>
